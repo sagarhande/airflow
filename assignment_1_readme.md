@@ -9,22 +9,15 @@ This project ingests, cleans, transforms, and loads user interaction data from a
 3. **Data Transformation**: Add a column for interaction counts.
 4. **Data Loading**: Save the cleaned and transformed data into a SQLite database.
 
-## Files
-- `data_ingestion.py`: Script for data ingestion.
-- `data_cleaning.py`: Script for data cleaning.
-- `data_transformation.py`: Script for data transformation.
-- `data_loading.py`: Script for data loading.
-- `interaction_data.csv`: Sample input data file.
-- `datawarehouse.db`: SQLite database file.
-
 ## How to Run
-1. Install dependencies:
+1. Setup virtual environment and Install dependencies:
     ```bash
-    pip install pandas sqlite3
+    python3 -m venv venv
+    pip install -r requirements.txt
     ```
 2. Execute the pipeline script:
     ```bash
-    python main.py
+    python3 assignment_1.py
     ```
 
-3. Verify the database using SQLite tools.
+3. Verify the database named ```datawarehouse-1.db``` using SQLite tools.

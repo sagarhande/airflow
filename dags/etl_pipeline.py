@@ -135,7 +135,7 @@ with DAG(
     def load_data_wrapper(**context):
         # Pull the transformed data from XCom
         transformed_data = context['ti'].xcom_pull(task_ids='transform_data')
-        load_data_to_sql(transformed_data, db_name='test_datawarehouse.db', table_name='interactions')
+        load_data_to_sql(transformed_data, db_name='datawarehouse-2.db', table_name='interactions')
 
 
     load_task = PythonOperator(
