@@ -3,9 +3,10 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import pandas as pd
 import sqlite3
+import os
 
-
-CSV_FILE = '/Users/sagarhande/airflow/dags/interaction_data.csv'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE = os.path.join(script_dir, "interaction_data.csv")
 
 def ingest_data(csv_file):
     print(f"Ingesting data from {csv_file}")
