@@ -15,9 +15,16 @@ This project ingests, cleans, transforms, and loads user interaction data from a
     python3 -m venv venv
     pip install -r requirements.txt
     ```
-2. Execute the pipeline script:
+   
+
+2. Optional: To generate a test data run below script:
+   ```
+   python3 dags/generate_test_data.py
+   ```
+
+3. Execute the pipeline script:
     ```bash
     python3 assignment_1.py
     ```
-
-3. Verify the database named ```datawarehouse-1.db``` using SQLite tools.
+   
+4. Verify the database named ```datawarehouse-1.db``` using SQLite tools.
